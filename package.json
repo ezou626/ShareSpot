@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ezou626/ShareSpot#readme",
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "@types/next": "^9.0.0",
     "@types/react": "^18.2.21",
     "next": "^13.4.19",
