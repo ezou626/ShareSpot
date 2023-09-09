@@ -1,0 +1,33 @@
+{
+  "name": "sharespot",
+  "version": "1.0.0",
+  "description": "USB-based social media platorm",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezou626/ShareSpot.git"
+  },
+  "keywords": [
+    "USB",
+    "next",
+    "python",
+    "flask",
+    "tailwind"
+  ],
+  "author": "Eric, Kevin, Sunny, Nathan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezou626/ShareSpot/issues"
+  },
+  "homepage": "https://github.com/ezou626/ShareSpot#readme",
+  "dependencies": {
+    "next": "^13.4.19"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  }
+}
