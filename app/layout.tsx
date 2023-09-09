@@ -1,6 +1,6 @@
 import { Arimo } from 'next/font/google';
-import './globals.css';
 import React from 'react';
+import './globals.css';
 
 const arimo = Arimo({
     subsets: ['latin'],
