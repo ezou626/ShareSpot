@@ -1,11 +1,18 @@
 import React from 'react';
 
-const UsbBox: React.FC = () => {
+interface ItemProps {
+    lat: string;
+    lng: string;
+    description: string;
+    imagePath: string;
+}
+
+const UsbBox: React.FC<ItemProps> = ({lat, lng, description, imagePath}) => {
   return (
     <div className="max-w-md mx-auto mt-8">
-      <img src='../../public/image1' className="w-full h-auto" />
-      <h2 className="text-2xl font-semibold mt-4">Title</h2>
-      <p className="text-gray-600 mt-2">Desc</p>
+      <img src={imagePath} className="w-full h-auto" />
+      <h2 className="text-2xl font-semibold mt-4 text-gray-300">{description}</h2>
+      <p className="text-gray-300 mt-2">`&lt;{lat}, {lng}&gt;`</p>
     </div>
   );
 };
