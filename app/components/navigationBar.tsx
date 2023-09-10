@@ -4,7 +4,7 @@ import { UserContext } from '../contexts/userContext';
 
 import Link from "next/link";
 
-function NavigationBar({showModal}: {showModal: () => void}) {
+function NavigationBar({showLoginModal, showSignupModal}: {showLoginModal: () => void, showSignupModal: () => void}) {
 
     const { user, setUser } = useContext(UserContext);
 
@@ -13,15 +13,16 @@ function NavigationBar({showModal}: {showModal: () => void}) {
     }
 
     let conditionalButtons = !user.loggedIn ? 
-        <button onClick={showModal}>Login</button> : 
-        <><Link href='profile'>Profile</Link>
-        <Link href='feed'>Feed</Link>
-        <button onClick={logout}>Logout</button></>;
+        <><button className='hover:underline' onClick={showLoginModal}>Login</button>
+        <button className='hover:underline' onClick={showSignupModal}>Sign Up</button></> : 
+        <><Link className='hover:underline' href='profile'>Profile</Link>
+        <Link className='hover:underline' href='feed'>Feed</Link>
+        <button className='hover:underline' onClick={logout}>Logout</button></>;
 
     return (
-        <nav>
-            <div className='px-5 space-x-5'>
-                <Link href='/'>Home</Link>
+        <nav className = 'py-5'>
+            <div className='px-7 space-x-5 float-right'>
+                <Link className='hover:underline' href='/'>Home</Link>
                 {conditionalButtons}
             </div>
         </nav>
