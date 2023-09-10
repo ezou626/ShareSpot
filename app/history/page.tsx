@@ -37,7 +37,7 @@ function Page() {
     }
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyDWaP9uHirp36mON-N9-gVbUQ5XmqtRl5A' as string,
+        googleMapsApiKey: process.env.GMAPS_API_KEY!,
         libraries: libraries as any,
     });
 
