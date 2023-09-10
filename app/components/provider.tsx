@@ -7,7 +7,7 @@ export function LoginProvider({children}: {children: React.ReactNode}) {
 
   const [user, setUser] = useState({email: "", loggedIn: false});
 
-  return <UserContext.Provider value={{user :{email: "", loggedIn: false}, setUser: setUser}} >
+  return <UserContext.Provider value={{user: user, setUser: setUser}} >
     {children}
     </UserContext.Provider>;
 }
