@@ -25,7 +25,7 @@ function HomePage() {
         if (user.email != "") {
             return;
         }
-        fetch('http://10.102.91.87:5000/login', {
+        fetch(`${process.env.API_URL}/login`, {
             method: 'POST',
             mode: 'cors',
             headers: {
