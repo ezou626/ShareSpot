@@ -41,3 +41,7 @@ Friends/Recommendation systems. View other stuff nearby.
 Populate db with actual stuff. 
 Image like/share functionality. 
 Antivirus LOL
+
+sharespot
+
+ShareSpot2!
