@@ -3,6 +3,7 @@ USB-based social media tracking location
 
 https://careful-granite-398516.ue.r.appspot.com
 
+frontend home page demo: https://share-spot.vercel.app/
 
 Just commit readme change to main when you finish sm.
 
