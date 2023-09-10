@@ -92,9 +92,9 @@ function HomePage() {
              <main className='px-10 overflow-y-clip space-y-5 py-32 mx-auto max-w-5xl animate-revealbody'>
                 <h1 className='text-6xl font-bold text-blue-600'>ShareSpot</h1>
                 <h2 className='text-4xl text-blue-400'>The USB-based Social Media Platform</h2>
-                <Link href="/history" passHref legacyBehavior>
+                {/* <Link href="/history" passHref legacyBehavior>
                         <a className="hover:underline">Locations</a>
-                </Link>
+                </Link> */}
             </main>
         </>
     )
