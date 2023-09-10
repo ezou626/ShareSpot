@@ -15,6 +15,14 @@ function HomePage() {
                 <Link href="/history" passHref legacyBehavior>
                         <a className="hover:underline">Locations</a>
             </Link>
+            <div></div>
+            <Link href="/home" passHref legacyBehavior>
+                        <a className="hover:underline">Home</a>
+            </Link>
+            <div></div>
+            <Link href="/temp" passHref legacyBehavior>
+                        <a className="hover:underline">Pages</a>
+            </Link>
             </main>
         </>
     )

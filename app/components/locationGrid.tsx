@@ -1,4 +1,3 @@
-// src/components/PastLocationsGrid.js
 import React from "react";
 
 var pastLocations = [{

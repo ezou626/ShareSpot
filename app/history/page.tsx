@@ -1,5 +1,3 @@
-// src/App.js
-
 "use client"
 import React, { useMemo, useRef } from "react";
 import PastLocationsGrid from "../components/locationGrid"
