@@ -25,7 +25,7 @@ const ImageGrid: React.FC = () => {
         <div className="grid grid-cols-3 gap-4">
             {images.map((imageUrl, index) => (
                 <div key={index} className="aspect-square">
-                    <Link href={{pathname: "/usbpage", query: {usbId: "1"}}} legacyBehavior>
+                    <Link href={{pathname: "/usbpage", query: {usbId: "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"}}} legacyBehavior>
                         <img
                             src={imageUrl}
                             alt={`Image ${index + 1}`}

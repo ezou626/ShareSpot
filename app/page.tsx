@@ -32,7 +32,7 @@ function HomePage() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({"user email": {username}, "user password": {password}})
+            body: JSON.stringify({ "user email": { username }, "user password": { password } })
         })
         .then(response => response.json())
         .then(response => {
