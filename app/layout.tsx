@@ -4,11 +4,16 @@ import './globals.css';
 import { LoginProvider } from './components/provider';
 import NavigationBar  from './components/navigationBar';
 import Login from './components/loginModal';
+import { Metadata } from 'next';
 
 const arimo = Arimo({
     subsets: ['latin'],
     weight: ['400']
 });
+
+export const metadata: Metadata = {
+    title: 'ShareSpot',
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     

@@ -1,15 +1,10 @@
 "use client"
 
-import { Metadata } from 'next';
 import React, { useContext, useState } from 'react';
 import Link from "next/link";
 import NavigationBar from './components/navigationBar';
 import Login from './components/loginModal';
 import { UserContext } from './contexts/userContext';
-
-export const metadata: Metadata = {
-    title: 'ShareSpot',
-}
 
 function HomePage() {
 
