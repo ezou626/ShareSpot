@@ -96,6 +96,7 @@ function HomePage() {
                         <a className="hover:underline">Locations</a>
                 </Link> */}
             </main>
+            <footer className='animate-revealprofiles text-center'>Created at PennApps 2023</footer>
         </>
     )
 }

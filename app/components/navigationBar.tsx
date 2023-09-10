@@ -20,7 +20,7 @@ function NavigationBar({showLoginModal, showSignupModal}: {showLoginModal: () =>
         <button className='hover:underline' onClick={logout}>Logout</button></>;
 
     return (
-        <nav className = 'py-5'>
+        <nav className = 'py-5 animate-revealnav'>
             <div className='px-7 space-x-5 float-right'>
                 <Link className='hover:underline' href='/'>Home</Link>
                 {conditionalButtons}
