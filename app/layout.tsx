@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (<html lang='en' className={arimo.className}>
     <head>
     </head>
-    <body className={'bg-gray-950'}>
+    <body className={'bg-gray-950 text-white'}>
         <LoginProvider>{children}</LoginProvider>
     </body>
     </html>);
