@@ -37,7 +37,7 @@ function Page() {
     }
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: process.env.GMAPS_API_KEY!,
+        googleMapsApiKey: process.env.NEXT_PUBLIC_GMAPS_API_KEY!,
         libraries: libraries as any,
     });
 
