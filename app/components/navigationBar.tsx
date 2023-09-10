@@ -4,7 +4,7 @@ import { UserContext } from '../contexts/userContext';
 
 import Link from "next/link";
 
-function NavigationBar({showLoginModal, showSignupModal}: {showLoginModal: () => void, showSignupModal: () => void}) {
+function NavigationBar({showLoginModal, showSignupModal}: {showLoginModal?: () => void, showSignupModal?: () => void}) {
 
     const { user, setUser } = useContext(UserContext);
 
@@ -21,6 +21,7 @@ function NavigationBar({showLoginModal, showSignupModal}: {showLoginModal: () =>
 
     return (
         <nav className = 'py-5 animate-revealnav'>
+            {user.loggedIn ? <div className='px-7 float-left'>{user.email}</div> : <></>}
             <div className='px-7 space-x-5 float-right'>
                 <Link className='hover:underline' href='/'>Home</Link>
                 {conditionalButtons}
