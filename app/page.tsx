@@ -15,28 +15,40 @@ function HomePage() {
 
     const [showModal, setShowModal] = useState(false);
     const {user, setUser} = useContext(UserContext);
+    const [error, setError] = useState('');
 
     function setShowModalWrapper(value: boolean) {
         setShowModal(value);
     }
 
     function loginWrapper(username: string, password: string) {
-        console.log(username + " " + password)
-        console.log("PENIS")
         if (user.email != "") {
             return;
         }
-        fetch('http://127.0.0.1:5000/login', {
+        fetch('http://10.102.91.87:5000/login', {
             method: 'POST',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({"user email": {username}, "user password": {password}})
         })
+        .then(response => response.json())
         .then(response => {
-            console.log(response.json());
-            if (user.email != "") {
-                setShowModalWrapper(false)
+            switch (response["authentication_status"]) {
+                case "success":
+                    setUser({email: username, loggedIn: true})
+                    setShowModalWrapper(false)
+                    setError('');
+                    break;
+                case "failed":
+                    setError("Your password or username is incorrect.");
+                    break;
+                case "does not exist":
+                    setError("No account exists with this username.");
+                    break;
+                default:
+                    break;
             }
         })
     }
@@ -44,7 +56,7 @@ function HomePage() {
     return (
         <>
             <NavigationBar showModal={() => {setShowModalWrapper(true)}} />
-            {showModal ? <Login login={loginWrapper} unShowModal={() => setShowModalWrapper(false)}/> : <></>}
+            {showModal ? <Login login={loginWrapper} unShowModal={() => setShowModalWrapper(false)} error={error}/> : <></>}
              <main className='px-10 overflow-y-clip space-y-5 py-32 mx-auto max-w-5xl animate-revealbody'>
                 <h1 className='text-6xl font-bold text-blue-950'>ShareSpot</h1>
                 <h2 className='text-4xl text-slate-600'>The USB-based Social Media Platform</h2>

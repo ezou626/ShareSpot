@@ -1,7 +1,7 @@
 "use client";
 import { SetStateAction, useState } from "react";
 
-function Login({login, unShowModal}: {login: (username: string, password: string) => void, unShowModal: () => void}) {
+function Login({login, unShowModal, error}: {login: (username: string, password: string) => void, unShowModal: () => void, error: string}) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -17,6 +17,7 @@ function Login({login, unShowModal}: {login: (username: string, password: string
         <button onClick={unShowModal} className='rounded bg-red-600 hover:bg-red-400 text-white float-right px-1'>Close</button>
         <input className='rounded border-gray-500 bg-inherit pt-5 text-white' placeholder="Username" onChange={handleUsernameChange} />
         <input className='rounded border-gray-500 bg-inherit pb-5 text-white' type="password" placeholder="Password" onChange={handlePasswordChange}/>
+        <p hidden></p>
         <button onClick={() => {login(username, password);       
         }} className='rounded bg-blue-600 hover:bg-blue-400 text-white float-left px-1'>Submit</button>
     </div>
